@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    button{
+        font-family: sans-serif;
+        border: none;
+        padding: 15px 30px;
+        font-size: 20px;
+        outline: none;
+        margin: 10px;
+    }
+
+    #btn{
+        background-color: rgb(23, 52, 89);
+        color: #f8f9f9;
+        box-shadow: .5px .5px 1px 2px #000000;
+    }
+    </style>
+</head>
+<body>
+   <button id="btn">Show a dialog</button>
+
+   <p id="demo" style="color: gold;"> Hello World!</p>
+   <button type="button" onclick="myFunc ()"> Change style</button>
+ 
+   <div id="sample" style="width: 200px; height: 200px; background-color: yellow;">Hello World!</div>
+   <button type="button" onclick="show()">Show</button>
+   <button type="button" onclick="hide()">Hide</button>
+
+   <script>
+    document.getElementById("btn").onclick = function(){
+        alert (" I am a dialog box!")
+    }
+
+    function myFunc () {
+        document.getElementById("demo").innerHTML = "Hello Everyone!";
+        document.getElementById("demo").style.fontSize = "50px";
+        document.getElementById("demo").style.color = "green";
+        document.getElementById("demo").style.fontWeight = "bold"
+    }
+
+    function show(){
+       document.getElementById("sample").style.display = "block";
+    }
+
+    function hide(){
+       document.getElementById("sample").style.display = "none"
+    }
+
+   </script>
+</body>
+</html>
