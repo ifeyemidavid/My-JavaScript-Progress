@@ -16,6 +16,12 @@
     </style>
 </head>
 <body>
+
+    <!--testing branches-->
+    <p id="branch">GO</p>
+    <button onclick="changeSet()" >Let see if works</button>
+
+
     <div onclick="changeColor(this)" style="background-color: red;">
         Tap me to change my color
     </div>
@@ -30,6 +36,12 @@
             else {
                 element.style.backgroundColor = "red"
             }
+        }
+
+        function changeSet (){
+            document.getElementById("branch").innerHTML = "success"
+            document.getElementById("branch").style.fontSize = "20px"
+            document.getElementById("branch").style.color = "red"
         }
     </script>
 </body>
