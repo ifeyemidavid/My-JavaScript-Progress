@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <!--js displying output-->
+ <p id="demo"></p>
+ <button onclick="myFunc()">Here is a dialog box</button>
+ <button onclick="mySum()">result</button>
+ <p id="sample"></p>
+ <button onclick="myLog()">log result</button>
+
+  <script>
+ 
+ // 1.using console
+   const x = 5;
+   const y = 2;
+   const sum = x + y;
+
+   console.log(sum)
+
+// 2. using dialog box / alert box
+ function myFunc() {
+    const a = 3;
+    const b = 2;
+    const sum = a + b;
+
+    alert(sum)
+ }
+
+ // 3. writing to HTML elements
+ function mySum (){
+    const r = 5;
+    const m = 5;
+    const sum = r + m;
+
+    document.getElementById("demo").innerHTML = sum
+ }
+
+ // 4. writing to the browser, but should only be used for testing as it will delete all existing HTML
+  function myLog(){
+    const k = 7;
+    const t = 3;
+    const sum = k + t;
+
+    document.write(sum)
+  }
+
+  </script>
+</body>
+</html>
