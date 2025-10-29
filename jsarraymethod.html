@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        // js array method
+
+
+        // the forEach() method
+        // it is used to loop over an array or access each element data
+
+        const cities = ["madrid", "berlin", "tokyo"];
+        cities.forEach(function(val, i, arr) {
+            document.write(i + ". " + val + "</br>");
+            // the callback function is invoked with 3 arguments the value, the index and the array.
+        })
+
+
+        // the join() method
+        // it creates and returns a new string by combining all the elements.
+
+        const town = ["madrid", "manchester", "turkey"];
+        document.write(town.join("-")) // can use any character you want
+
+
+        // we can also convert a string into an array using the split() method
+
+        const string = "lorem - ipsum - dolor - sit - amet.";
+        const arr = string.split(" - ")
+        document.write(typeof arr + ": " + arr)
+
+
+
+        // merging array
+        // the concat() method
+        // it merges 2 or more arrays 
+
+        const number1 = [1,2,3];
+        const number2 = [4,5,6];
+        const number3 = [7,8,9];
+
+        const arry = number1.concat(number2, number3);
+        document.write(arry);
+
+
+        // searching an item
+        // the indexOf() method returns the last index of the first occurence of an element in the array
+        const fruit = ["mango", "pawpaw", "apple", "grape"]
+        const i = fruit.indexOf("mango")
+        document.write(i)
+        // while the lastIndexOf() method does the opposite
+        // both indexOf() and lastIndexOf() returns -1 if the ietem is not in the array
+
+
+        // to check if a value exists in an array, use the include() method, it returns true if a value is included in an array and vice versa
+
+        const towns = ["lagos", "ikeja", "lekki", "ikorodu"];
+        const x = towns.includes("lagos");
+        const y = towns.includes("london");
+
+        document.getElementById("demo").innerHTML =  x + "</br>" + y;
+
+
+        // slicing an array, the slice() method.
+        // it returns a new copy of a section of an array.
+
+        const locations = ["berlin", "turkey", "india", "korea"]
+        // it takes 2 arguments
+        const places = locations.slice(0, 3);
+        document.write(places)
+
+        // splicing an array
+        const months = ["january", "april", "may"];
+         // to add new elements
+        months.splice(1, 0, "febuary", "march");
+        document.write(months);
+
+        // it can be used too remove items/ omit items
+        months.splice(0, 1);
+        // 1 must always be included as the value of the 2nd argument
+        document.write(months)
+
+        // to remove multiple
+        //  items make the first argument where you want to start the deletion from and the 2nd argument how many items you want to remove
+
+        // a better way to replace an item is to reassign it with it index
+
+         
+
+
+    </script>
+</body>
+</html>

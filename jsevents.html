@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <button id="btn">click to show dialog box</button>
+
+  <button onclick='alert("this button is clicked to show a dialog box");'>click me</button>
+
+  <button onclick="myFunc ()">welcome</button>
+
+  <button id="box">show box</button>
+
+  <label> choose a city
+    <select id="city" name="city">
+        <option value="berlin">berlin</option>
+        <option value="tokyo">tokyo</option>
+        <option value="rio">rio</option>
+        <option value="mumbia">mumbia</option>
+    </select>
+  </label>
+  <p>you selected : <span id="demo"></span></p>
+
+  <textarea id="area"></textarea>
+  <p> the value is : <span id="word"></span></p>
+
+  <textarea id="text">type your message...</textarea>
+
+  <textarea id="big">send us your feedback...</textarea>
+  <p>click the <b>textarea</b> then click outside to see the effect</p>
+
+  <p>window width : <span id="windowWidth"></span> </p>
+  <p>window height : <span id="windowHeight"></span> </p>
+  <p> rotate your device to see the effect.</p>
+
+    <script>
+     const btn = document.getElementById("btn");
+     //event handler also known as event listener
+     btn.onclick = function (){
+        alert("the button was clicked, and the task is to show this dialog box")
+     }
+
+     function myFunc(){
+        alert("hello world!")
+     }
+ 
+     const box = document.getElementById("box");
+
+     box.addEventListener("click", function (){
+        alert("welome to javaScript")
+     })
+
+     // other event includes
+
+     // the change event
+     const select= document.getElementById("city");
+
+     select.addEventListener("change", function (){
+        const val = document.getElementById("city").value;
+        document.getElementById("demo").innerHTML = val;
+     })
+
+     // the keypress event
+     const area = document.getElementById("area");
+
+     area.addEventListener("keypress", function() {
+        document.getElementById("word").innerHTML = area.value;
+
+     })
+
+     // the focus event
+     const text = document.getElementById("text");
+
+     text.addEventListener("focus", function(){
+        text.style.background = "yellow";
+     })
+     
+
+     // the blur event
+     const big = document.getElementById("big");
+
+     big.addEventListener("focus", function (){
+        big.style.background = "yellow";
+     });
+
+     big.addEventListener("blur", function (){
+        big.style.background = "white";
+     });
+
+     // the resize function
+     window.addEventListener("resize", function(){
+        document.getElementById("windowWidth").innerHTML = window.innerWidth;
+        document.getElementById("windowHeight").innerHTML = window.innerHeight;
+     })
+ 
+    </script>
+</body>
+</html>

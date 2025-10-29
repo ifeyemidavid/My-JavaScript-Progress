@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p id="demo"></p>
+   <p id="ex"></p>
+   
+   <script>
+    // the Number.isInteger() method
+
+    const num1 = Number.isInteger(5)
+    document.write(num1);
+
+    // the isNaN() method
+
+    const num2 = isNaN("hello world!");
+
+    document.getElementById("demo").innerHTML = num2
+
+    // the parseint() method
+    const num3 = parseInt("21 is an integer")
+    // only the number is returned not the char
+    document.write(num3)
+
+    // the parseFloat() method to parse in numbers with decimals
+
+    // the toFixed() method
+    const num4 = (21.123456).toFixed(1) // returns 21.1
+    document.getElementById("ex").innerHTML = num4
+
+    // the toExponential() method used just like toFixed() method
+
+    // the toString() method used same way and more...
+   </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="sample"></p>
+
+
+    <script>
+        const x = 4;
+        const y = 5.5;
+        const sum = x + y;
+
+        const text = 21 + " racheal";
+        const text1 = "racheal " + 21;
+
+        document.getElementById("demo").innerHTML = x + "</br>" + y
+        
+        document.getElementById("demo").innerHTML = sum
+
+        document.getElementById("demo").innerHTML = text + "</br>" + text1
+
+        // interger are numbers without decimals
+        // floating point are numbers with decimals
+        const num1 = 2; // interger
+        const num2 = 2.14 // float
+
+        document.write(num1);
+        document.write(num2);
+        
+        // the e notation, this is used to write extra large numbers or small numbers (exponent notation)
+
+        const me1 = 212e6
+        const me2 = 212e-6
+        document.getElementById("sample").innerHTML = me1 + "</br>" + me2
+
+        // js cannot add numbers instead it will concatenate them as strings
+
+    </script>
+</body>
+</html>

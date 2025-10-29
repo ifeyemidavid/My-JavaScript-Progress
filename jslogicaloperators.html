@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="score"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML = true && true + "</br>" + true || false;
+
+        if (3 == 3 && 4 > 1){
+            alert("the condition is true")
+        }
+        
+        // tenary operator
+
+        const testScore = 80;
+        const testResult = (testScore > 75) ? "passed" : "failed";
+        document.getElementById("score").innerHTML = testResult
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="msg">click this button before 3 seconds to stop the pop-up dialog from showing.</p>
+    <button onclick="cancelTimeout()">cancel timeout</button>
+    <p id="demo">10</p>
+    <button onclick="stopInterval()">stop interval</button>
+    
+    <script>
+        // timeout
+
+        // const myTimeout = setTimeout(function(){
+        //     alert("hello world!");
+        // }, 3000);
+
+
+
+        // cancelling timeout
+
+
+        // const myTimeout = setTimeout (function(){
+        //     alert("hello everyone!");
+        // }, 3000);
+
+        // function cancelTimeout(){
+        //     clearTimeout(myTimeout);
+        //     document.getElementById("msg").innerHTML = "<b>mytimeout</b> has been cancelled, the dialog will not be shown"
+        // }
+
+
+
+
+        // interval
+
+
+        // let x = 10;
+        // const myInterval = setInterval(function(){
+        //     // adds 10 to x
+        //     x += 10;
+        //     document.getElementById("demo").innerHTML = x;
+        // }, 1000);
+
+
+
+
+        // stopping interval
+
+
+           let x = 10;
+        const myInterval = setInterval(function(){
+            // adds 10 to x
+            x += 10;
+            document.getElementById("demo").innerHTML = x;
+        }, 1000);
+        function stopInterval(){
+            clearInterval(myInterval);
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>

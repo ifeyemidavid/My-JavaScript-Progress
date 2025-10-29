@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+    <p id="sum"></p>
+    <p id="click">sum will be printed here</p>
+    <button onclick="addNum(2,5)">add</button>
+    <button onclick="showBox()">dialog box</button>
+    <p id="sample"></p>
+    <script>
+     // syntax for function
+     function functionName(parameter1, parameter2){
+        // code or statement to be excuted
+     }
+
+     function writeText(str){
+        document.getElementById("demo").innerHTML= str
+     }
+     writeText("hello world!")
+
+
+     function addNumbers(num1, num2){
+        const sum = num1 + num2;
+
+        document.getElementById("sum").innerHTML = sum;
+     }
+       addNumbers(1,2)
+
+
+       function addNum(num1, num2){
+        const sum = num1 + num2;
+
+        document.getElementById("click").innerHTML = sum;
+     }
+
+     function showBox (){
+        alert("hello world!")
+     }
+
+
+
+     function  getFullName(firstName, LastName){
+        return firstName + " " + LastName;
+     }
+
+     const fullName = getFullName("john", "doe")
+     document.write(fullName)
+
+     function toMiles(kilometer){
+      const miles = kilometer * 0.62137;
+      return kilometer + "kilometer/s " + "equal" + miles + "miles.";
+     }
+     alert(toMiles(3));
+      document.getElementById("sample").innerHTML = toMiles(10);
+   
+    </script>
+</body>
+</html>
