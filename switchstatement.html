@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label>
+        choose a fruit:
+        <select id="fruits" onchange="checkPrice()">
+           <option value="apple">apple</option>
+           <option value="banana">banana</option>
+           <option value="cherry">cherry</option>
+           <option value="mango">mango</option>
+           <option value="pawpaw">pawpaw</option>
+        </select>
+    </label>
+    <p id="price"></p>
+    
+    <script>
+        const fruits = "mango";
+
+        if (fruits == "apple"){
+            document.write("the color is red");
+        }
+        if (fruits == "strawberry"){
+            document.write(" the color is pink");
+        }
+        if (fruits == "mango"){
+            document.write("the color is yellow")
+        }
+       // it is inefficient to keep writing the if statement
+       // we can rewrite the above code using the switch statement
+
+       const fruit = "watermelon";
+
+       switch(fruit){
+        case "apple":
+            document.write("the color is red");
+            break;
+
+        case "strawberry":
+            document.write("the color is green");
+            break;
+
+        case "watermelon":
+            document.write("the color is reddish");
+            break; 
+       }
+
+       // both the first code and the7 second are the same but the second one is more efficient and of good practice
+       // always include break else all case will be carried out instead of stopping
+
+
+       function checkPrice(){
+        const fruit = document.getElementById("fruits").value;
+        let amount;
+
+        switch(fruit){
+            case "apple":
+                amount = "$1.92"
+                document.getElementById("price").innerHTML = "The price of " + fruit + " is " + amount;
+                break;
+            
+            case "banana":
+                amount = "$2.32"
+                document.getElementById("price").innerHTML = "The price of " + fruit + " is " + amount;
+                break;
+
+            case "cherry":
+                amount = " $3.11"
+                document.getElementById("price").innerHTML = "The price of " + fruit + " is " + amount;
+                break;
+
+            case "mango":
+                amount = "$2.87"
+                document.getElementById("price").innerHTML = "The price of " + fruit + " is " + amount;
+                break;
+
+                default:
+                    document.getElementById("price").innerHTML = "sorry for the inconveniences, " + fruit + " is currently not available. ";
+        }
+       }
+    </script>
+</body>
+</html>

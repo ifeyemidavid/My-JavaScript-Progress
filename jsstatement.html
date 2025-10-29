@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js statement</title>
+</head>
+<body>
+    <p id="elem">first paragraph</p>
+    <p id="change">change text</p>
+    <button type="button" onclick="myText ()">change HTML content</button>
+    <p id="text">change text</p>
+    <button type="button" onclick="myFunc ()">click to see changes</button>
+    
+
+    <script>
+        document.getElementById("elem").innerText="hello world!"
+        document.getElementById("change").innerHTML="hello everyone!"
+        document.getElementById("text").innerHTML=
+        "hello everyone!"
+
+        // a statement that spans a single or multiple lines behave the same way
+
+
+        // grouping js statement
+        function myFunc () {
+            document.getElementById("text").innerHTML = "changed"
+        }
+
+
+        // js keyword, to declare a variable we use the const keyword
+        function myText (){
+            const text = "hello life!";
+            document.getElementById("change").innerHTML = text
+        }
+    </script>
+</body>
+</html>

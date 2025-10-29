@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        const fruits = ["apple", "banana", "mango", "orange", "strawberry"];
+        let html = "";
+
+        html += "<p>" + fruits[0] + "</p>";
+        html += "<p>" + fruits[1] + "</p>";
+        html += "<p>" + fruits[2] + "</p>";
+        html += "<p>" + fruits[3] + "</p>";
+        html += "<p>" + fruits[4] + "</p>";
+
+        document.getElementById("demo").innerHTML = html;
+
+
+        // can be shorten to
+        const fruit = ["apple", "banana", "mango", "orange", "strawberry"]
+        let outline = "";
+
+        for(let i = 0; i < fruit.length ; i++){
+            outline += "<p>" + fruit[i] + "</p>";
+        }
+        document.getElementById("demo2").innerHTML = outline;
+
+       // for loop executes statements repeatedly as long as the specified condition is met.
+
+       for (let i = 0; i < 3; i++){
+        document.write("<P> Hello world! </p>")
+       }
+    </script>
+</body>
+</html>
+

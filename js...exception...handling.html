@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>In this example, the following <b>exception</b>is thrown because <b> myFunction()</b> is not defined.</p>
+    <p id="demo"></p>
+    <p id="mistake"></p>
+    <p>Try to enter a number that's <b>less than 18</b>.</p>
+    <form>
+        <label> Age: <input type="number" id="age"></label>
+        <button type="button"  id="submit">submit</button>
+    </form>
+    <p id="sample"></p>
+    
+    <script>
+        // the try...catch statement
+        // it takes a block of code to test
+        try {
+            myFunction();
+        } catch(err){
+            document.getElementById("demo").innerHTML = err;
+        }
+
+
+        // the throw statement
+        try {
+            throw "an error occured, please fix it!";
+        } catch (err){
+            document.getElementById("mistake").innerHTML = err;
+        }// the finanly statement to check if an exception is thrown 
+        finally{
+            alert("hello world!");
+        }
+
+
+        // illustrative example
+        // giving a condition to enter
+        const submit = document.getElementById("submit");
+        
+        submit.onclick = function(){
+            const age = parseInt(document.getElementById("age").value);
+            try{
+                if (age < 18){
+                    throw "user must be 18 or above to enter";
+                }else{
+                    document.getElementById("sample").innerHTML = " user is 18 or above";
+                }
+            } catch(err){
+                document.getElementById("sample").innerHTML = err;
+            }
+        }
+
+
+        // error objects includes
+        // RangeError: error that occurs when a numeric variable or parameter is outside of its valid range
+        // ReferenceError: error that occurs when de-referencing an invalid reference
+        // syntaxError: error that occurs while parsing code in eval() method
+        // typeError: error that occurs when a variable or parameter is not of a valid type
+        // urlError: error that occurs when encodeURL() or decodeURL() are passed invalid parameter
+        
+
+
+
+    </script>
+</body>
+</html>

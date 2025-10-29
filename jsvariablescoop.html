@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myFunc();">show favorite fruits</button>
+    <button onclick="myFun();">show favorite fruits</button>
+
+    <p id="demo"></p>
+    <script>
+        // we have 2 types of variable scoop
+        // global and local scoop
+
+
+        // global variable
+        const fruit =  "mango";
+
+        function myFunc(){
+            alert(fruit);
+        }
+        
+        // note: any variable that is initialized or has been assigned a value inside a function without being declared first will be global.
+
+
+
+        // local variable
+        document.getElementById("demo").innerHTML = fruits;
+
+        function myFun(){
+            const fruits = "apple";
+            alert(fruits);
+        }
+
+
+    </script>
+</body>
+</html>
